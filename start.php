@@ -26,6 +26,8 @@ $bob = R::dispense('user');
 $bob->lastname = 'Hank';
 R::store ($bob);
 
+//coolbeans
+
 //we havent figured out redbean yet. Ruby on rails is much faster.
 
 
