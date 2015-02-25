@@ -12,23 +12,29 @@ R::setup('mysql:host=127.0.0.1;dbname=red',
 
 //create user object
 $user = R::dispense( 'user' ); // create user table object
-$user->ID = 1;
+//$user->ID = 1;
 $user->name = 'Elon';
 $user->age = 99;
-$user->gender = 'M';
-$user->IP = '192.168.1.1';
-$user->firstsignedon = 'Aug 25 2015';
-//$user->post= 1;
-$user->Posts;
-
+//$user->gender = 'M';
+//$user->IP = '192.168.1.1';
+//$user->firstsignedon = 'Aug 25 2015'
+//$user->Posts;
 
 // rails is awesome !!!
 
 R::store( $user );  //store user into database
 
+$bob = R::dispense('user');
+$bob->lastname = 'Hank';
+R::store ($bob);
+
+//coolbeans
+
+//we havent figured out redbean yet. Ruby on rails is much faster.
+
 
 $houserent = R::dispense( 'houserent' ); // create object
-$houserent->ID = 1;
+//$houserent->ID = 1;
 $houserent->title = 'Non-smoking room for two';
 $houserent->description = 'The best darn house';
 $houserent->price = 10;
@@ -46,11 +52,11 @@ R::store( $houserent );//stores into database
 $user->Posts = $houserent;
 
 
-
+/*
 foreach ($user as $b){
     print_r($b) ;
     echo $user->ownPosts;
-}
+}*/
 
 
 //$user->post = $houserent; //connect the two objects
