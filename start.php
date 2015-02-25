@@ -22,6 +22,8 @@ $user->firstsignedon = 'Aug 25 2015';
 $user->Posts;
 
 
+// rails is awesome !!!
+
 R::store( $user );  //store user into database
 
 
